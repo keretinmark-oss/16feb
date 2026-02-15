@@ -1,346 +1,274 @@
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ru">
 <head>
-	
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ショップ - Doimnim - 不動産・ホテル予約専門</title>
-    <meta name="description" content="Dominiumzは高品質な不動産物件とホテル予約サービスを提供する専門サイトです。理想の物件と快適な宿泊体験をお選びください。">
-    <meta name="keywords" content="不動産, 物件, ホテル予約, 宿泊, 賃貸, 売買, 投資物件">
-    
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/custom.css">
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#0d9488',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "v5d1dwsbfg");
-</script>
-    
-    
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>asanori｜Йога-студия</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:#faf8f4;
+  color:#333;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:auto;padding:80px 20px}
+
+/* HEADER */
+header{
+  position:fixed;top:0;width:100%;
+  background:rgba(255,255,255,.9);
+  z-index:99;
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+.nav ul{display:flex;gap:25px;list-style:none;font-size:14px}
+.logo{font-size:22px;letter-spacing:2px}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1552196563-55cd4e45efb3") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+.hero-box{
+  background:rgba(255,255,255,.85);
+  padding:50px;
+  max-width:700px;
+}
+.hero h1{font-size:32px;margin-bottom:15px}
+.hero p{font-size:15px;margin-bottom:30px}
+.btn{
+  border:1px solid #9db3a0;
+  padding:12px 28px;
+  margin:5px;
+  display:inline-block;
+  font-size:14px;
+}
+.btn.primary{background:#9db3a0;color:#fff}
+
+/* STATS */
+.stats{display:flex;justify-content:center;gap:60px;margin-top:30px}
+.stats div{text-align:center;font-size:14px}
+
+/* WELCOME */
+.welcome{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.welcome img{width:100%;border-radius:4px}
+
+/* PROGRAMS */
+.programs{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  text-align:center;
+}
+.programs i{
+  font-size:28px;
+  color:#9db3a0;
+  margin-bottom:15px;
+}
+.card{
+  background:#fff;
+  padding:40px 25px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:20px;
+}
+.gallery img{width:100%;height:100%;object-fit:cover}
+
+/* CTA */
+.cta{text-align:center}
+
+/* FOOTER */
+footer{
+  background:#3b3b3b;
+  color:#ccc;
+  padding:60px 20px;
+}
+.footer-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:40px;
+  font-size:13px;
+}
+footer h4{color:#fff;margin-bottom:15px;font-size:14px}
+.copy{text-align:center;margin-top:40px;font-size:12px;color:#888}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .welcome{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .stats{flex-direction:column;gap:20px}
+}
+</style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="nav-glass fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-4 py-5">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                                <a href="../index.php" class="flex items-center gap-3 group">
-                    <div class="bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-600 text-white px-5 py-2.5 rounded-xl font-black text-xl shadow-luxury-lg transform group-hover:scale-105 transition-all duration-300">
-                        D
-                    </div>
-                    <span class="text-2xl font-black text-gray-900 hover:text-blue-600 transition-all duration-300 tracking-tight">dominiumz</span>
-                </a>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50">ホーム</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50">私たちについて</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50">物件一覧</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50">よくある質問</a>
-                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50">お問い合わせ</a>
-                    
-                    <!-- Cart Icon -->
-                    <a href="#" class="relative p-2 rounded-lg hover:bg-blue-50 transition-all duration-300 group">
-                        <svg class="w-6 h-6 text-gray-700 group-hover:text-blue-600 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                        <span id="cart-count" class="absolute -top-1 -right-1 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center hidden shadow-luxury">0</span>
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="../index.php" class="block py-2 text-gray-700 hover:text-orange-600 transition">ホーム</a>
-                <a href="../pages/about.php" class="block py-2 text-gray-700 hover:text-orange-600 transition">私たちについて</a>
-                <a href="../pages/shop.php" class="block py-2 text-gray-700 hover:text-blue-600 transition">物件一覧</a>
-                <a href="../pages/faq.php" class="block py-2 text-gray-700 hover:text-orange-600 transition">よくある質問</a>
-                <a href="../pages/contact.php" class="block py-2 text-gray-700 hover:text-orange-600 transition">お問い合わせ</a>
-                <a href="../cart.php" class="block py-2 text-gray-700 hover:text-orange-600 transition flex items-center">
-                    <span>カート</span>
-                    <span id="cart-count-mobile" class="ml-2 bg-blue-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- Spacer for fixed header -->
-    <div class="h-24"></div>
+<body>
 
+<header>
+  <div class="nav">
+    <div class="logo">asanori</div>
+    <ul>
+      <li>Главная</li>
+      <li>О нас</li>
+      <li>Программы</li>
+      <li>Инструкторы</li>
+      <li>Абонементы</li>
+      <li>Контакты</li>
+    </ul>
+  </div>
+</header>
 
-<!-- Shop Header -->
-<section class="bg-gradient-to-r from-blue-500 to-teal-500 py-16">
-    <div class="container mx-auto px-4 text-center text-white">
-        <h1 class="text-5xl font-bold mb-4">物件一覧</h1>
-        <p class="text-xl opacity-90">高品質な不動産物件をお選びください</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Новый опыт йоги для гармонии тела и разума</h1>
+    <p>
+      Пространство, где вы можете восстановить внутренний покой и баланс
+      в ритме современной жизни.
+      asanori — йога-студия, созданная для вас.
+    </p>
+
+    <a class="btn primary">Записаться на бесплатное занятие</a>
+    <a class="btn">Стать участником</a>
+
+    <div class="stats">
+      <div><strong>500+</strong><br>Участников</div>
+      <div><strong>50+</strong><br>Классов</div>
+      <div><strong>10+</strong><br>Инструкторов</div>
     </div>
+  </div>
 </section>
 
-<!-- Products Grid -->
-<section class="section-padding bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Property 1 -->
-            <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="高級マンション" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">高級マンション</h3>
-                    <p class="text-gray-600 mb-4 text-sm">都心の便利な立地にある高級マンション。3LDK、南向き、角部屋。</p>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-2xl font-bold text-blue-600">¥8,500万円</span>
-                    </div>
-                    <button class="add-to-cart buy-now w-full btn-primary mb-2" 
-                            data-id="1" 
-                            data-name="高級マンション" 
-                            data-price="85000000" 
-                            data-image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop">
-                        詳細を見る
-                    </button>
-                    <button class="add-to-cart w-full btn-secondary" 
-                            data-id="1" 
-                            data-name="高級マンション" 
-                            data-price="85000000" 
-                            data-image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop">
-                        お気に入りに追加
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Property 2 -->
-            <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="一戸建て住宅" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">一戸建て住宅</h3>
-                    <p class="text-gray-600 mb-4 text-sm">広々とした庭付きの一戸建て住宅。4LDK、駐車場2台、角地。</p>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-2xl font-bold text-blue-600">¥4,200万円</span>
-                    </div>
-                    <button class="add-to-cart buy-now w-full btn-primary mb-2" 
-                            data-id="2" 
-                            data-name="一戸建て住宅" 
-                            data-price="42000000" 
-                            data-image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop">
-                        詳細を見る
-                    </button>
-                    <button class="add-to-cart w-full btn-secondary" 
-                            data-id="2" 
-                            data-name="一戸建て住宅" 
-                            data-price="42000000" 
-                            data-image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop">
-                        お気に入りに追加
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Property 3 -->
-            <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="ホテルスイート" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">プレミアムホテルスイート</h3>
-                    <p class="text-gray-600 mb-4 text-sm">最高級の宿泊体験を提供するホテルスイート。都心の好立地。</p>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-2xl font-bold text-blue-600">¥35,000/泊</span>
-                    </div>
-                    <button class="add-to-cart buy-now w-full btn-primary mb-2" 
-                            data-id="3" 
-                            data-name="プレミアムホテルスイート" 
-                            data-price="35000" 
-                            data-image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop">
-                        予約する
-                    </button>
-                    <button class="add-to-cart w-full btn-secondary" 
-                            data-id="3" 
-                            data-name="プレミアムホテルスイート" 
-                            data-price="35000" 
-                            data-image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop">
-                        お気に入りに追加
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Property 4 -->
-            
-            
-            <!-- Property 5 -->
-            <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop" alt="リゾートホテル" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">リゾートホテル</h3>
-                    <p class="text-gray-600 mb-4 text-sm">海を望むリゾートホテル。オーシャンビュー、プール付き。</p>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-2xl font-bold text-blue-600">¥28,000/泊</span>
-                    </div>
-                    <button class="add-to-cart buy-now w-full btn-primary mb-2" 
-                            data-id="5" 
-                            data-name="リゾートホテル" 
-                            data-price="28000" 
-                            data-image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop">
-                        予約する
-                    </button>
-                    <button class="add-to-cart w-full btn-secondary" 
-                            data-id="5" 
-                            data-name="リゾートホテル" 
-                            data-price="28000" 
-                            data-image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop">
-                        お気に入りに追加
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Property 6 -->
-            
-            
-            <!-- Property 7 -->
-            <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop" alt="賃貸マンション" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">賃貸マンション</h3>
-                    <p class="text-gray-600 mb-4 text-sm">新築の賃貸マンション。2LDK、南向き、角部屋、ペット可。</p>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-2xl font-bold text-blue-600">¥12万円/月</span>
-                    </div>
-                    <button class="add-to-cart buy-now w-full btn-primary mb-2" 
-                            data-id="7" 
-                            data-name="賃貸マンション" 
-                            data-price="120000" 
-                            data-image="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop">
-                        詳細を見る
-                    </button>
-                    <button class="add-to-cart w-full btn-secondary" 
-                            data-id="7" 
-                            data-name="賃貸マンション" 
-                            data-price="120000" 
-                            data-image="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop">
-                        お気に入りに追加
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Property 8 -->
-            <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="ビジネスホテル" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">ビジネスホテル</h3>
-                    <p class="text-gray-600 mb-4 text-sm">駅近のビジネスホテル。Wi-Fi完備、朝食付き、ビジネスセンター利用可。</p>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-2xl font-bold text-blue-600">¥8,500/泊</span>
-                    </div>
-                    <button class="add-to-cart buy-now w-full btn-primary mb-2" 
-                            data-id="8" 
-                            data-name="ビジネスホテル" 
-                            data-price="8500" 
-                            data-image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop">
-                        予約する
-                    </button>
-                    <button class="add-to-cart w-full btn-secondary" 
-                            data-id="8" 
-                            data-name="ビジネスホテル" 
-                            data-price="8500" 
-                            data-image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop">
-                        お気に入りに追加
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- WELCOME -->
+<section class="container welcome">
+  <div>
+    <h2>Добро пожаловать</h2>
+    <p>
+      asanori — это велнес-студия, объединяющая традиционный японский дух
+      и современную йогу.
+      Мы создаём пространство для гармонии тела, разума и дыхания.
+    </p>
+    <a class="btn">Наша история</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b">
 </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 mt-20">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: Brand Description -->
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Dominiumz</h3>
-                    <p class="text-sm leading-relaxed">
-                        Dominiumzは、お客様の理想の不動産物件と快適なホテル宿泊体験を提供することを使命とする専門サイトです。信頼と品質を第一に考え、厳選された物件と宿泊施設をご紹介しています。
-                    </p>
-                </div>
-                
-                <!-- Column 2: Header Menu -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">メニュー</h4>
-                    <ul class="space-y-2">
-                                                <li><a href="#" class="hover:text-blue-500 transition">ホーム</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">私たちについて</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">物件一覧</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">よくある質問</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 3: Legal Pages -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">法的情報</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-500 transition">プライバシーポリシー</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">利用規約</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">免責事項</a></li>
-                        <li><a href="#" class="hover:text-blue-500 transition">クッキーポリシー</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 4: Contact Information -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">お問い合わせ</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li>
-                            <span class="font-semibold">住所:</span><br>
-                            東京都千代田区丸の内1-1-1
-                        </li>
-                        <li>
-                            <span class="font-semibold">電話:</span><br>
-                            <a href="#" class="hover:text-blue-500 transition">+81 60-6467-8577</a>
-                        </li>
-                        <li>
-                            <span class="font-semibold">メール:</span><br>
-                            <a href="#" class="hover:text-blue-500 transition"><span class="__cf_email__" data-cfemail="eb8884859f8a889fab8f84868285829e8691c59883849b">[email&#160;protected]</span></a>
-                        </li>Doimnim
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-                <p>&copy; 2025 Doimnim. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- JavaScript -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/cart.js"></script>
-    <script src="../assets/js/main.js"></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"efca8bd03a974b3a849eedbb9086957f","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<!-- PROGRAMS -->
+<section class="container">
+  <h2 style="text-align:center;margin-bottom:50px">Программы</h2>
+  <div class="programs">
+    <div class="card">
+      <i class="fa-solid fa-spa"></i>
+      <h4>Базовая йога</h4>
+      <p>Основы для начинающих</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-wind"></i>
+      <h4>Флоу-йога</h4>
+      <p>Движение в ритме дыхания</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-moon"></i>
+      <h4>Ресторативная йога</h4>
+      <p>Глубокое расслабление</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-leaf"></i>
+      <h4>Майндфулнесс</h4>
+      <p>Фокус на внутреннем состоянии</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="container">
+  <h2 style="text-align:center;margin-bottom:40px">Атмосфера студии</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
+    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container cta">
+  <h2>Начните уже сегодня</h2>
+  <p>Ваш путь к благополучию начинается сейчас.</p>
+  <a class="btn primary">Записаться на бесплатное занятие</a>
+  <a class="btn">Посмотреть абонементы</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>asanori</h4>
+      <p>Тихое пространство для гармонии тела и разума.</p>
+    </div>
+    <div>
+      <h4>Студия</h4>
+      <p>О нас<br>Программы<br>Инструкторы</p>
+    </div>
+    <div>
+      <h4>Ресурсы</h4>
+      <p>Частые вопросы<br>Расписание</p>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <p>hello@asanori.shop<br>Токио, Япония</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 asanori. Все права защищены.</div>
+</footer>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
